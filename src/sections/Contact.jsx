@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 const Contact = () => {
+  useEffect(() => {
+    // Initialize EmailJS with your public key from the dashboard
+    emailjs.init("8Q_u_fcLaV-KXH3sw");
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,26 +33,44 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
-      await emailjs.send(
-        "service_79b0nyj",
-        "template_17us8im",
+      console.log("Form submitted:", formData);
+      // Log the configuration being used
+      console.log("EmailJS Config:", {
+        serviceId: "service_d86wjik",
+        templateId: "template_lg24x6c",
+        publicKey: "8Q_u_fcLaV-KXH3sw",
+      });
+      const response = await emailjs.send(
+        "service_d86wjik",
+        "template_lg24x6c",
         {
-          from_name: formData.name,
-          to_name: "Kartikeya",
-          from_email: formData.email,
-          to_email: "KartikeyaSanatiDev@gmail.com",
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
+          time: new Date().toLocaleString(),
         },
-        "pn-Bw_mS1_QQdofuV"
+        "8Q_u_fcLaV-KXH3sw"
       );
-      setIsLoading(false);
-      setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+
+      if (response.status === 200) {
+        setIsLoading(false);
+        setFormData({ name: "", email: "", message: "" });
+        showAlertMessage("success", "Your message has been sent!");
+      } else {
+        throw new Error("Failed to send email");
+      }
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      console.error("Email error:", error);
+      console.error("Error details:", {
+        status: error.status,
+        text: error.text,
+        name: error.name,
+      });
+      showAlertMessage(
+        "danger",
+        `Failed to send email: ${error.message || "Unknown error"}`
+      );
     }
   };
   return (

@@ -17,9 +17,14 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Kartikeya singh</p>
+            <p className="headtext">Hi, I'm Kartikeya Singh</p>
             <p className="subtext">
-              Passionate about technology and innovation, I am a Software Developer eager to explore the vast world of software development. With a keen interest in backend development, I am driven to build efficient and scalable systems that deliver impactful solutions.
+              As an innovative Software Developer, I transform complex
+              challenges into elegant solutions. My passion lies in crafting
+              robust backend architectures and exploring cutting-edge
+              technologies. Driven by a commitment to excellence, I consistently
+              deliver scalable systems that power the next generation of digital
+              experiences.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -101,8 +106,13 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications , My expertise mainly lies in backend development , 
+              I specialize in backend development using Python (FastAPI) and
+              Golang, crafting high-performance microservices and RESTful APIs.
+              With expertise in DevOps practices and containerization using
+              Docker, Docker Swarm, and Compose, I build and deploy scalable
+              applications that deliver real business value. My focus is on
+              creating efficient, maintainable systems from conception to
+              deployment.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
