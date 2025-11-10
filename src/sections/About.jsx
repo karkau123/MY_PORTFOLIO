@@ -19,13 +19,8 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm kartikeya Singh</p>
             <p className="subtext">
-              As an innovative Software Developer, I transform complex
-              challenges into elegant solutions. My passion lies in crafting
-              robust backend architectures and exploring cutting-edge
-              technologies. Driven by a commitment to excellence, I consistently
-              deliver scalable systems that power the next generation of digital
-              experiences.
-            </p>
+              I’m a Software Developer with a passion for building and deploying systems from scratch — turning ideas into scalable, high-performance solutions. My expertise spans from kernel-level fundamentals to modern backend architectures, enabling me to design systems that are both efficient and resilient. With a deep focus on performance and reliability, I design systems that scale effortlessly and stand the test of real-world demands.
+              </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>

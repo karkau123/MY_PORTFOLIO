@@ -274,7 +274,7 @@ export const experiences = [
     job: "Indiamart",
     date: "Sep 2025-Present",
     contents: [
-      "Tools & Technologies: Golang, Docker, Docker Swarm, Docker Compose, NVIDIA CUDA",
+      "Tools & Technologies: Golang, Docker, Docker Swarm, Docker Compose, CUDA",
       "Migrated machine learning model deployment from a GKE CPU-based infrastructure to a GPU-based VM environment with NVIDIA Tesla T4 GPUs to accelerate processing.",
       "Utilized Docker, Docker Swarm, and Docker Compose to containerize and orchestrate the new deployment.",
       "Achieved a drastic reduction in API latency, from an average of 38ms down to 7-8ms.",
