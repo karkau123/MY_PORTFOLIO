@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>© 2025 Kartikeya. All rights reserved.</p>
+      <p>© 2025 kartikeya. All rights reserved.</p>
     </section>
   );
 };

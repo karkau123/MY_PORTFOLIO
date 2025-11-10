@@ -12,7 +12,7 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Scalable-Ecommerce-app",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/accessories.png",
     tags: [
       {
         id: 1,
@@ -65,7 +65,7 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Website-Project?tab=readme-ov-file",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/prep.png",
     tags: [
       {
         id: 1,
@@ -112,7 +112,7 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Scheduler",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/scheduler.png",
     tags: [
       {
         id: 1,
@@ -135,12 +135,10 @@ export const myProjects = [
       "Developed a food delivery application with a clean, responsive UI using Firebase for backend services.",
       "Implemented themes such as dark and light modes and added delivery animations for an enhanced user experience.",
       "Integrated authentication logic and Firestore DB to store user orders and payment receipts.",
-      "Introduced features such as a side drawer and bottom tabs for easy filtering of different meals and food categories.",
-      "Enabled users to add an address or fetch their current location using Google Maps API.",
     ],
     href: "https://github.com/karkau123/Zwigato",
     logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    image: "/assets/projects/zwigato.png",
     tags: [
       {
         id: 1,
@@ -292,37 +290,37 @@ export const experiences = [
 export const reviews = [
   {
     name: "Leetcode",
-    username: "@jack",
+    username: "",
     body: " Rated 1721 at LeetCode with over 850 problems solved, ranking among the top 10% of Coders",
     img: "https://robohash.org/jack",
   },
   {
     name: "Codechef",
-    username: "@jill",
+    username: "",
     body: " Reached a peak rating of 1720 (3-star) on CodeChef with a global rank of 520 in the Starters 120 Competition.",
     img: "https://robohash.org/jill",
   },
   {
     name: "HackNITP 2.0",
-    username: "@john",
+    username: "",
     body: "Secured 1st Rank in HackNITP 2.0 Hackathon, showcasing coding proficiency and critical thinking skills.",
     img: "https://robohash.org/john",
   },
   {
     name: "Team Lead",
-    username: "@Backend",
+    username: "",
     body: "Google Developer Student Club – Backend Team",
     img: "https://robohash.org/alice",
   },
   {
     name: "Academics",
-    username: "@bob",
+    username: "",
     body: "Secured a perfect 10.0 CGPA in the 8th semester, showcasing strong academic excellence.",
     img: "https://robohash.org/bob",
   },
   {
     name: "Hackathon Tata 1mg",
-    username: "@charlie",
+    username: "",
     body: "Runner up",
     img: "https://robohash.org/charlie",
   },
