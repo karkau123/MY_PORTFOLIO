@@ -17,22 +17,22 @@ export const myProjects = [
       {
         id: 1,
         name: "Python",
-        path: "/assets/logos/csharp.svg",
+        path: "/assets/logos/python.svg",
       },
       {
         id: 2,
         name: "Fastapi",
-        path: "/assets/logos/dotnet.svg",
+        path: "/assets/logos/fastapi.svg",
       },
       {
         id: 3,
         name: "React",
-        path: "/assets/logos/efcore.png",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 4,
         name: "Redux",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "/assets/logos/redux.svg",
       },
       {
         id: 4,
@@ -42,12 +42,12 @@ export const myProjects = [
       {
         id: 4,
         name: "PostgreSQL",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "/assets/logos/postgres.svg",
       },
       {
         id: 4,
         name: "Redis",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "/assets/logos/redis.svg",
       }
       
     ],
@@ -70,7 +70,7 @@ export const myProjects = [
       {
         id: 1,
         name: "HTML",
-        path: "/assets/logos/html5.svg",
+        path: "/assets/logos/html.svg",
       },
       {
         id: 2,
@@ -80,22 +80,17 @@ export const myProjects = [
       {
         id: 3,
         name: "Firebase",
-        path: "/assets/logos/auth0.svg",
+        path: "/assets/logos/firebase.svg",
       },
       {
         id: 4,
         name: "Firestore",
-        path: "/assets/logos/sqlite.svg",
+        path: "/assets/logos/firestore.svg",
       },
       {
         id: 5,
         name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 6,
-        name: "Generative AI",
-        path: "/assets/logos/react.svg",
+        path: "/assets/logos/tailwind.svg",
       },
     ],
   },
@@ -117,12 +112,12 @@ export const myProjects = [
       {
         id: 1,
         name: "Flutter",
-        path: "/assets/logos/blazor.svg",
+        path: "/assets/logos/flutter.svg",
       },
       {
         id: 2,
         name: "Dart",
-        path: "/assets/logos/dotnetcore.svg",
+        path: "/assets/logos/dart.svg",
       }
     ],
   },
@@ -143,27 +138,27 @@ export const myProjects = [
       {
         id: 1,
         name: "Flutter",
-        path: "/assets/logos/cplusplus.svg",
+        path: "/assets/logos/flutter.svg",
       },
       {
         id: 2,
         name: "Dart",
-        path: "/assets/logos/csharp.svg",
+        path: "/assets/logos/dart.svg",
       },
       {
         id: 3,
         name: "Firebase",
-        path: "/assets/logos/git.svg",
+        path: "/assets/logos/firebase.svg",
       },
       {
         id: 4,
         name: "Firestore",
-        path: "/assets/logos/microsoft.svg",
+        path: "/assets/logos/firestore.svg",
       },
       {
         id: 5,
         name: "Google Maps API",
-        path: "/assets/logos/microsoft.svg",
+        path: "/assets/logos/google-maps.svg",
       }
     ],
   },
