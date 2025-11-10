@@ -19,8 +19,14 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm kartikeya Singh</p>
             <p className="subtext">
-              I’m a Software Developer with a passion for building and deploying systems from scratch — turning ideas into scalable, high-performance solutions. My expertise spans from kernel-level fundamentals to modern backend architectures, enabling me to design systems that are both efficient and resilient. With a deep focus on performance and reliability, I design systems that scale effortlessly and stand the test of real-world demands.
-              </p>
+              I’m a Software Developer with a passion for building and deploying
+              systems from scratch — turning ideas into scalable,
+              high-performance solutions. My expertise spans from kernel-level
+              fundamentals to modern backend architectures, enabling me to
+              design systems that are both efficient and resilient. With a deep
+              focus on performance and reliability, I design systems that scale
+              effortlessly and stand the test of real-world demands.
+            </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
@@ -90,10 +96,18 @@ const About = () => {
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <img
+              src="assets/logos/nit-patna.png"
+              alt="NIT Patna Logo"
+              className="h-24 w-24"
+            />
             <p className="text-center headtext">
-              Do you want to start a project together?
+              B.Tech in Computer Science and Engineering from National Institute
+              of Technology Patna
             </p>
-            <CopyEmailButton />
+            <p className="text-center text-white font-semibold text-lg">
+              CGPA - 8.83/10
+            </p>
           </div>
         </div>
         {/* Grid 5 */}
