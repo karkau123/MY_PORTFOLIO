@@ -12,44 +12,44 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Scalable-Ecommerce-app",
     logo: "",
-    image: "/assets/projects/accessories.png",
+    image: "./assets/projects/accessories.png",
     tags: [
       {
         id: 1,
         name: "Python",
-        path: "/assets/logos/python.svg",
+        path: "./assets/logos/python.svg",
       },
       {
         id: 2,
         name: "Fastapi",
-        path: "/assets/logos/fastapi.svg",
+        path: "./assets/logos/fastapi.svg",
       },
       {
         id: 3,
         name: "React",
-        path: "/assets/logos/react.svg",
+        path: "./assets/logos/react.svg",
       },
       {
         id: 4,
         name: "Redux",
-        path: "/assets/logos/redux.svg",
+        path: "./assets/logos/redux.svg",
       },
       {
         id: 4,
         name: "SQLAlchemy",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "./assets/logos/tailwindcss.svg",
       },
       {
         id: 4,
         name: "PostgreSQL",
-        path: "/assets/logos/postgres.svg",
+        path: "./assets/logos/postgres.svg",
       },
       {
         id: 4,
         name: "Redis",
-        path: "/assets/logos/redis.svg",
+        path: "./assets/logos/redis.svg",
       }
-      
+
     ],
   },
   {
@@ -65,32 +65,32 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Website-Project?tab=readme-ov-file",
     logo: "",
-    image: "/assets/projects/prep.png",
+    image: "./assets/projects/prep.png",
     tags: [
       {
         id: 1,
         name: "HTML",
-        path: "/assets/logos/html.svg",
+        path: "./assets/logos/html.svg",
       },
       {
         id: 2,
         name: "JavaScript",
-        path: "/assets/logos/javascript.svg",
+        path: "./assets/logos/javascript.svg",
       },
       {
         id: 3,
         name: "Firebase",
-        path: "/assets/logos/firebase.svg",
+        path: "./assets/logos/firebase.svg",
       },
       {
         id: 4,
         name: "Firestore",
-        path: "/assets/logos/firestore.svg",
+        path: "./assets/logos/firestore.svg",
       },
       {
         id: 5,
         name: "TailwindCSS",
-        path: "/assets/logos/tailwind.svg",
+        path: "./assets/logos/tailwind.svg",
       },
     ],
   },
@@ -107,17 +107,17 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Scheduler",
     logo: "",
-    image: "/assets/projects/scheduler.png",
+    image: "./assets/projects/scheduler.png",
     tags: [
       {
         id: 1,
         name: "Flutter",
-        path: "/assets/logos/flutter.svg",
+        path: "./assets/logos/flutter.svg",
       },
       {
         id: 2,
         name: "Dart",
-        path: "/assets/logos/dart.svg",
+        path: "./assets/logos/dart.svg",
       }
     ],
   },
@@ -133,32 +133,32 @@ export const myProjects = [
     ],
     href: "https://github.com/karkau123/Zwigato",
     logo: "",
-    image: "/assets/projects/zwigato.png",
+    image: "./assets/projects/zwigato.png",
     tags: [
       {
         id: 1,
         name: "Flutter",
-        path: "/assets/logos/flutter.svg",
+        path: "./assets/logos/flutter.svg",
       },
       {
         id: 2,
         name: "Dart",
-        path: "/assets/logos/dart.svg",
+        path: "./assets/logos/dart.svg",
       },
       {
         id: 3,
         name: "Firebase",
-        path: "/assets/logos/firebase.svg",
+        path: "./assets/logos/firebase.svg",
       },
       {
         id: 4,
         name: "Firestore",
-        path: "/assets/logos/firestore.svg",
+        path: "./assets/logos/firestore.svg",
       },
       {
         id: 5,
         name: "Google Maps API",
-        path: "/assets/logos/google-maps.svg",
+        path: "./assets/logos/google-maps.svg",
       }
     ],
   },
@@ -175,27 +175,27 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
+    image: "./assets/projects/wordpress-theme.jpg",
     tags: [
       {
         id: 1,
         name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
+        path: "./assets/logos/wordpress.svg",
       },
       {
         id: 2,
         name: "HTML5",
-        path: "/assets/logos/html5.svg",
+        path: "./assets/logos/html5.svg",
       },
       {
         id: 3,
         name: "CSS3",
-        path: "/assets/logos/css3.svg",
+        path: "./assets/logos/css3.svg",
       },
       {
         id: 4,
         name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
+        path: "./assets/logos/vitejs.svg",
       },
     ],
   },
@@ -212,27 +212,27 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/elearning.jpg",
+    image: "./assets/projects/elearning.jpg",
     tags: [
       {
         id: 1,
         name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        path: "./assets/logos/blazor.svg",
       },
       {
         id: 2,
         name: "Azure",
-        path: "/assets/logos/azure.svg",
+        path: "./assets/logos/azure.svg",
       },
       {
         id: 3,
         name: "Stripe",
-        path: "/assets/logos/stripe.svg",
+        path: "./assets/logos/stripe.svg",
       },
       {
         id: 4,
         name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "./assets/logos/tailwindcss.svg",
       },
     ],
   },*/
@@ -242,17 +242,17 @@ export const mySocials = [
   {
     name: "GitHub",
     href: "https://github.com/karkau123",
-    icon: "/assets/logos/github.svg",
+    icon: "./assets/logos/github.svg",
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/kartikeya-singh-735a34233/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: "./assets/socials/linkedIn.svg",
   },
   {
     name: "LeetCode",
     href: "https://leetcode.com/u/singh_kartik/",
-    icon: "/assets/socials/leetcode.svg",
+    icon: "./assets/socials/leetcode.svg",
   },
 ];
 
