@@ -1,18 +1,21 @@
 export const myProjects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
+    id: 0,
+    title: "E-wallet Backend",
     description:
-      "",
+      "This FastAPI project is a digital wallet system that allows users to create accounts, manage their financial transactions, and perform various operations related to deposits, withdrawals, and currency management. The project is designed to provide a secure and efficient platform for handling digital financial activities.",
     subDescription: [
-      "Built FastAPI endpoints with SQLAlchemy and PostgreSQL for scalable product, user, and order management.",
-      "Developed a fast, responsive React SPA (Single-Page Application) using Redux for state management and Tailwind CSS for modern UI.",
-      "Integrated a robust and secure payment gateway ensuring seamless and reliable transaction handling.",
-      "Optimized database interactions and implemented caching strategies to deliver high-performance, low-latency data retrieval",
+      "User Management: Users can create accounts, update their profile information, and manage their login credentials.",
+      "Member Management: Members can be added to the system, and their information is securely stored. Members are associated with specific countries.",
+      "Country Information: Information about countries is stored, including their names.",
+      "Currency Support: The system supports multiple currencies, and their exchange rates are tracked. Currency information is linked to member profiles.",
+      "Deposits and Withdrawals: Users can make deposits and withdrawals, and transaction details are recorded for auditing purposes.",
+      "Gateway Integration: Deposits are processed through various gateways, and gateway information is maintained.",
+      "Transaction Logs: Comprehensive logs of all financial transactions are kept, ensuring transparency and accountability.",
     ],
-    href: "https://github.com/karkau123/Scalable-Ecommerce-app",
+    href: "https://github.com/karkau123/E-Wallet",
     logo: "",
-    image: "./assets/projects/accessories.png",
+    image: "./assets/projects/auth-system.jpg",
     tags: [
       {
         id: 1,
@@ -26,16 +29,6 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: "React",
-        path: "./assets/logos/react.svg",
-      },
-      {
-        id: 4,
-        name: "Redux",
-        path: "./assets/logos/redux.svg",
-      },
-      {
-        id: 4,
         name: "SQLAlchemy",
         path: "./assets/logos/tailwindcss.svg",
       },
@@ -44,12 +37,6 @@ export const myProjects = [
         name: "PostgreSQL",
         path: "./assets/logos/postgres.svg",
       },
-      {
-        id: 4,
-        name: "Redis",
-        path: "./assets/logos/redis.svg",
-      }
-
     ],
   },
   {
