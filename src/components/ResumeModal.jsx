@@ -29,7 +29,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
                 <h3 className="text-lg font-semibold text-white tracking-wide">
-                  Kartikeya Singh - Resume
+                  kartikeyaa Singh - Resume
                 </h3>
               </div>
 
@@ -38,7 +38,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                 {/* Download Button */}
                 <a
                   href={resumeUrl}
-                  download="Kartikeya_Singh_Resume.pdf"
+                  download="kartikeyaa_Singh_Resume.pdf"
                   className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 text-sm font-medium text-white transition-all duration-200 cursor-pointer"
                 >
                   <svg
@@ -157,7 +157,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                   {/* Direct Download Button */}
                   <a
                     href={resumeUrl}
-                    download="Kartikeya_Singh_Resume.pdf"
+                    download="kartikeyaa_Singh_Resume.pdf"
                     className="w-full py-3 px-4 rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-white font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <svg
