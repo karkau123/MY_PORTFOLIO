@@ -28,6 +28,8 @@ const ParallaxBackground = () => {
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain3Y,
+            willChange: "transform",
+            translateZ: 0,
           }}
         />
         {/* Planets */}
@@ -38,6 +40,8 @@ const ParallaxBackground = () => {
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             x: planetsX,
+            willChange: "transform",
+            translateZ: 0,
           }}
         />
         {/* Mountain Layer 2 */}
@@ -48,6 +52,8 @@ const ParallaxBackground = () => {
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain2Y,
+            willChange: "transform",
+            translateZ: 0,
           }}
         />
         {/* Mountaine Layer 1 */}
@@ -58,6 +64,8 @@ const ParallaxBackground = () => {
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain1Y,
+            willChange: "transform",
+            translateZ: 0,
           }}
         />
       </div>
