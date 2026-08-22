@@ -1,21 +1,46 @@
 export const myProjects = [
   {
     id: 0,
-    title: "E-wallet Backend",
+    title: "GitHub Repos Manager — MCP Server",
     description:
-      "This FastAPI project is a digital wallet system that allows users to create accounts, manage their financial transactions, and perform various operations related to deposits, withdrawals, and currency management. The project is designed to provide a secure and efficient platform for handling digital financial activities.",
+      "A lightweight MCP server that exposes GitHub repository operations to any MCP-compatible client without requiring heavy Docker dependencies or OAuth redirect flows.",
     subDescription: [
-      "User Management: Users can create accounts, update their profile information, and manage their login credentials.",
-      "Member Management: Members can be added to the system, and their information is securely stored. Members are associated with specific countries.",
-      "Country Information: Information about countries is stored, including their names.",
-      "Currency Support: The system supports multiple currencies, and their exchange rates are tracked. Currency information is linked to member profiles.",
-      "Deposits and Withdrawals: Users can make deposits and withdrawals, and transaction details are recorded for auditing purposes.",
-      "Gateway Integration: Deposits are processed through various gateways, and gateway information is maintained.",
-      "Transaction Logs: Comprehensive logs of all financial transactions are kept, ensuring transparency and accountability.",
+      "Built a lightweight MCP server that exposes GitHub repository operations to any MCP-compatible client without requiring heavy Docker dependencies or OAuth redirect flows.",
+      "Implemented 89 GitHub API commands out-of-the-box via environment-based token auth, enabling AI agents to automate repository workflows (PRs, issues, branches) programmatically and securely.",
     ],
-    href: "https://github.com/karkau123/E-Wallet",
+    href: "https://github.com/karkau123/Repo-manager-mcp",
     logo: "",
-    image: "./assets/projects/auth-system.jpg",
+    image: "./assets/projects/repo-manager-mcp.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "Node.js",
+        path: "./assets/logos/nodejs.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "./assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "GitHub API",
+        path: "./assets/logos/github.svg",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Medical RAG: Retrieval-Augmented QA",
+    description:
+      "A domain-specific RAG system for biomedical question answering over PubMed literature using 512-token chunks with 64-token overlap and PubMedBERT embeddings for high-precision retrieval.",
+    subDescription: [
+      "Built a domain-specific RAG system for biomedical question answering over PubMed literature using 512-token chunks with 64-token overlap and PubMedBERT embeddings for high-precision retrieval.",
+      "Orchestrated Qdrant vector retrieval (top-5) with Meditron-7B inference to generate context-grounded responses; evaluated pipeline with Ragas achieving 0.84+ faithfulness score across test queries.",
+    ],
+    href: "https://github.com/karkau123/Medical-Rag",
+    logo: "",
+    image: "./assets/projects/medical-rag.jpg",
     tags: [
       {
         id: 1,
@@ -24,205 +49,51 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "Fastapi",
-        path: "./assets/logos/fastapi.svg",
+        name: "LangChain",
+        path: "./assets/logos/langchain.svg",
       },
       {
         id: 3,
-        name: "SQLAlchemy",
-        path: "./assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 4,
-        name: "PostgreSQL",
-        path: "./assets/logos/postgres.svg",
+        name: "Qdrant",
+        path: "./assets/logos/docker.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "PrepBuddy – CSE Placement Prep Tool",
+    title: "Multi-Agent RAG Customer Support",
     description:
-      "A comprehensive platform designed to help computer science students prepare for placements with interactive features and AI assistance.",
+      "A multi-agent conversational AI system with LangGraph for intent-based dynamic routing of complex travel queries to specialized domain-specific sub-agents with stateful memory across turns.",
     subDescription: [
-      "Built a full-stack platform for CSE placement prep with subject-wise progress tracking and interactive mind maps.",
-      "Integrated Google Gemini AI Key to deliver context-aware answers for subtopic-specific and conceptual queries.",
-      "Implemented secure user authentication using Firebase (Email/Password + Google Sign-In).",
-      "Added theme toggle and responsive UI for a personalized, mobile-friendly experience.",
+      "Architected a multi-agent conversational AI with LangGraph for intent-based dynamic routing of complex travel queries to specialized domain-specific sub-agents with stateful memory across turns.",
+      "Integrated Qdrant for fast vector retrieval and implemented conditional routing logic with full system observability via LangSmith tracing and token-level debugging.",
     ],
-    href: "https://github.com/karkau123/Website-Project?tab=readme-ov-file",
+    href: "https://github.com/karkau123/MultiAgent-RAG-Customer-Support",
     logo: "",
-    image: "./assets/projects/prep.png",
+    image: "./assets/projects/multiagent-rag.jpg",
     tags: [
       {
         id: 1,
-        name: "HTML",
-        path: "./assets/logos/html.svg",
+        name: "Python",
+        path: "./assets/logos/python.svg",
       },
       {
         id: 2,
-        name: "JavaScript",
-        path: "./assets/logos/javascript.svg",
+        name: "LangChain",
+        path: "./assets/logos/langchain.svg",
       },
       {
         id: 3,
-        name: "Firebase",
-        path: "./assets/logos/firebase.svg",
+        name: "LangGraph",
+        path: "./assets/logos/langchain.svg",
       },
       {
         id: 4,
-        name: "Firestore",
-        path: "./assets/logos/firestore.svg",
-      },
-      {
-        id: 5,
-        name: "TailwindCSS",
-        path: "./assets/logos/tailwind.svg",
+        name: "Qdrant",
+        path: "./assets/logos/docker.svg",
       },
     ],
   },
-  {
-    id: 3,
-    title: "CPU and Memory Scheduling Visualizer",
-    description:
-      "An interactive application that visualizes various CPU and Memory scheduling algorithms to help understand process management concepts.",
-    subDescription: [
-      "Built a PC application using Flutter that visualizes scheduling algorithms for CPU and Memory.",
-      "Developed visualizations for CPU scheduling algorithms (FCFS, SJF, RR) to enhance understanding of process management.",
-      "Implemented memory scheduling visualizations with multiple allocation strategies, including Best Fit.",
-      "Created an intuitive user interface for better learning experience of operating system concepts.",
-    ],
-    href: "https://github.com/karkau123/Scheduler",
-    logo: "",
-    image: "./assets/projects/scheduler.png",
-    tags: [
-      {
-        id: 1,
-        name: "Flutter",
-        path: "./assets/logos/flutter.svg",
-      },
-      {
-        id: 2,
-        name: "Dart",
-        path: "./assets/logos/dart.svg",
-      }
-    ],
-  },
-  {
-    id: 4,
-    title: "Zwigato",
-    description:
-      "A feature-rich food delivery application built with Flutter, offering a seamless ordering experience with real-time location tracking.",
-    subDescription: [
-      "Developed a food delivery application with a clean, responsive UI using Firebase for backend services.",
-      "Implemented themes such as dark and light modes and added delivery animations for an enhanced user experience.",
-      "Integrated authentication logic and Firestore DB to store user orders and payment receipts.",
-    ],
-    href: "https://github.com/karkau123/Zwigato",
-    logo: "",
-    image: "./assets/projects/zwigato.png",
-    tags: [
-      {
-        id: 1,
-        name: "Flutter",
-        path: "./assets/logos/flutter.svg",
-      },
-      {
-        id: 2,
-        name: "Dart",
-        path: "./assets/logos/dart.svg",
-      },
-      {
-        id: 3,
-        name: "Firebase",
-        path: "./assets/logos/firebase.svg",
-      },
-      {
-        id: 4,
-        name: "Firestore",
-        path: "./assets/logos/firestore.svg",
-      },
-      {
-        id: 5,
-        name: "Google Maps API",
-        path: "./assets/logos/google-maps.svg",
-      }
-    ],
-  },
-  /*{
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "./assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "./assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "./assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "./assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "./assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "./assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "./assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "./assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "./assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "./assets/logos/tailwindcss.svg",
-      },
-    ],
-  },*/
 ];
 
 export const mySocials = [
@@ -247,28 +118,28 @@ export const experiences = [
   {
     title: "Backend Development Intern",
     job: "TATA 1MG",
-    date: "Jan–Aug 2025",
+    date: "Jan 2025 – Sep 2025",
     contents: [
-      "Tools & Technologies: Python, FastAPI, Sanic",
-      "Architected scalable, high-throughput microservice ecosystem using FastAPI and Sanic with async I/O, enabling modular API endpoints and seamless scalability under load.",
-      "Integrated Spike API, replacing existing Terra API to stream wearable health data—saving 1mg nearly $4200 annualy",
-      "Designed and developed low-latency APIs with Pydantic validation, OAuth-based authentication, and efficient schema normalization to support fast and reliable user insights.",
-      "Optimized existing APIs using techniques like caching, response compression, and query optimization, reducing average latency by 10–15.%",
+      "Tools & Technologies: Python, FastAPI, SQS, MongoDB",
+      "Architected a scalable, high-throughput microservice ecosystem using FastAPI and Sanic with async I/O, enabling modular, independently deployable API endpoints under sustained load.",
+      "Integrated Spike API, replacing the existing Terra API to stream wearable health data—reducing third-party vendor cost by $4,200 annually while improving data freshness.",
+      "Designed low-latency data APIs with Pydantic schema validation and OAuth 2.0 authentication to deliver fast, reliable user health insights.",
+      "Optimized critical API endpoints via Redis caching and response compression, reducing average response latency by 10–15% under production traffic.",
     ],
   },
   {
     title: "Software Engineer",
-    job: "Indiamart",
-    date: "Sep 2025-Present",
+    job: "Indiamart Intermesh Ltd",
+    date: "Sep 2025 – Present",
     contents: [
-      "Tools & Technologies: Golang, Docker, Docker Swarm, Docker Compose, CUDA",
-      "Migrated machine learning model deployment from a GKE CPU-based infrastructure to a GPU-based VM environment with NVIDIA Tesla T4 GPUs to accelerate processing.",
-      "Utilized Docker, Docker Swarm, and Docker Compose to containerize and orchestrate the new deployment.",
-      "Achieved a drastic reduction in API latency, from an average of 38ms down to 7-8ms.",
-      "Currently developing a sales-based agent to automate and reduce the workload for sellers on the platform.",
+      "Tools & Technologies: Golang, Kafka, LangChain, LiteLLM, Ragas",
+      "Engineered an event-driven call intelligence pipeline using Kafka, Debezium, and Cloud SQL (GCP) to centralize real-time data extraction across thousands of daily seller-buyer calls, deprecating 5+ redundant isolated API processes.",
+      "Integrated Gemini 2.5 Flash via LiteLLM with Structured JSON Schemas to enforce deterministic model outputs—eliminating hallucinations and enabling accurate extraction of 10+ product attributes per call transcript.",
+      "Established a Ragas-based evaluation framework to continuously monitor RAG pipeline quality, tracking faithfulness and answer relevancy metrics across model iterations to guide prompt and retrieval improvements.",
     ],
   },
 ];
+
 export const reviews = [
   {
     name: "Leetcode",
@@ -306,16 +177,4 @@ export const reviews = [
     body: "Runner up",
     img: "https://robohash.org/charlie",
   },
-  // {
-  //   name: "Dave",
-  //   username: "@dave",
-  //   body: "Simply breathtaking. The best decision I've made in a while.",
-  //   img: "https://robohash.org/dave",
-  // },
-  // {
-  //   name: "Eve",
-  //   username: "@eve",
-  //   body: "So glad I found this. It has changed the game for me.",
-  //   img: "https://robohash.org/eve",
-  // },
 ];

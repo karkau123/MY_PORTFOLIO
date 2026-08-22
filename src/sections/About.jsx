@@ -17,15 +17,14 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm kartikeya Singh</p>
+            <p className="headtext">Hi, I'm Kartikeya Singh</p>
             <p className="subtext">
-              I’m a Software Developer with a passion for building and deploying
-              systems from scratch — turning ideas into scalable,
-              high-performance solutions. My expertise spans from kernel-level
-              fundamentals to modern backend architectures, enabling me to
-              design systems that are both efficient and resilient. With a deep
-              focus on performance and reliability, I design systems that scale
-              effortlessly and stand the test of real-world demands.
+              I'm an AI Software Engineer with production experience building
+              LLM-powered pipelines, Multi-Agent Systems, and RAG architectures
+              at scale. Proficient in end-to-end AI development — from retrieval
+              (LlamaIndex, LangChain, Qdrant) to orchestration (LangGraph),
+              inference optimization (vLLM), and evaluation (Ragas). I focus on
+              building reliable, production-grade generative AI systems.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -46,37 +45,37 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="Golang"
+              text="LangChain"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="FastAPI"
+              text="RAG"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Docker"
+              text="Kafka"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="Kubernetes"
+              text="LLM"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              text="Golang"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              text="FastAPI"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              text="TypeScript"
               containerRef={grid2Container}
             />
           </div>
@@ -113,15 +112,14 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headText">Tech Stack</p>
             <p className="subtext">
-              I specialize in backend development using Python (FastAPI) and
-              Golang, crafting high-performance microservices and RESTful APIs.
-              With expertise in DevOps practices and containerization using
-              Docker, Docker Swarm, and Compose, I build and deploy scalable
-              applications that deliver real business value. My focus is on
-              creating efficient, maintainable systems from conception to
-              deployment.
+              I specialize in AI/LLM engineering with Python, LangChain,
+              LangGraph, and vLLM — building RAG pipelines, multi-agent systems,
+              and production inference services. My backend expertise spans
+              FastAPI, Golang, Kafka, and gRPC for high-throughput microservices.
+              With Docker, Kubernetes, and GCP, I deploy scalable AI systems
+              that deliver real business value from prototype to production.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
