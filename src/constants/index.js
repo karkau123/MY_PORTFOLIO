@@ -116,15 +116,13 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Backend Development Intern",
-    job: "TATA 1MG",
-    date: "Jan 2025 – Sep 2025",
+    title: "Senior AI Engineer",
+    job: "InfoEdge",
+    date: "May 2026 – Present",
     contents: [
-      "Tools & Technologies: Python, FastAPI, SQS, MongoDB",
-      "Architected a scalable, high-throughput microservice ecosystem using FastAPI and Sanic with async I/O, enabling modular, independently deployable API endpoints under sustained load.",
-      "Integrated Spike API, replacing the existing Terra API to stream wearable health data—reducing third-party vendor cost by $4,200 annually while improving data freshness.",
-      "Designed low-latency data APIs with Pydantic schema validation and OAuth 2.0 authentication to deliver fast, reliable user health insights.",
-      "Optimized critical API endpoints via Redis caching and response compression, reducing average response latency by 10–15% under production traffic.",
+      "Tools & Technologies: Python, vLLM, Qdrant, LangChain, RAG",
+      "Spearheaded the development of a production-grade LLM pipeline for intelligent job matching and semantic search, significantly improving recommendation relevance.",
+      "Deployed scalable RAG architectures using vLLM and Qdrant to process, embed, and retrieve relevant candidate profiles with sub-second latency.",
     ],
   },
   {
@@ -139,13 +137,15 @@ export const experiences = [
     ],
   },
   {
-    title: "Senior AI Engineer",
-    job: "InfoEdge",
-    date: "May 2026 – Present",
+    title: "Backend Development Intern",
+    job: "TATA 1MG",
+    date: "Jan 2025 – Sep 2025",
     contents: [
-      "Tools & Technologies: Python, vLLM, Qdrant, LangChain, RAG",
-      "Spearheaded the development of a production-grade LLM pipeline for intelligent job matching and semantic search, significantly improving recommendation relevance.",
-      "Deployed scalable RAG architectures using vLLM and Qdrant to process, embed, and retrieve relevant candidate profiles with sub-second latency.",
+      "Tools & Technologies: Python, FastAPI, SQS, MongoDB",
+      "Architected a scalable, high-throughput microservice ecosystem using FastAPI and Sanic with async I/O, enabling modular, independently deployable API endpoints under sustained load.",
+      "Integrated Spike API, replacing the existing Terra API to stream wearable health data—reducing third-party vendor cost by $4,200 annually while improving data freshness.",
+      "Designed low-latency data APIs with Pydantic schema validation and OAuth 2.0 authentication to deliver fast, reliable user health insights.",
+      "Optimized critical API endpoints via Redis caching and response compression, reducing average response latency by 10–15% under production traffic.",
     ],
   },
 ];
