@@ -130,12 +130,22 @@ export const experiences = [
   {
     title: "Software Engineer",
     job: "Indiamart Intermesh Ltd",
-    date: "Sep 2025 – Present",
+    date: "Sep 2025 – Apr 2026",
     contents: [
       "Tools & Technologies: Golang, Kafka, LangChain, LiteLLM, Ragas",
       "Engineered an event-driven call intelligence pipeline using Kafka, Debezium, and Cloud SQL (GCP) to centralize real-time data extraction across thousands of daily seller-buyer calls, deprecating 5+ redundant isolated API processes.",
       "Integrated Gemini 2.5 Flash via LiteLLM with Structured JSON Schemas to enforce deterministic model outputs—eliminating hallucinations and enabling accurate extraction of 10+ product attributes per call transcript.",
       "Established a Ragas-based evaluation framework to continuously monitor RAG pipeline quality, tracking faithfulness and answer relevancy metrics across model iterations to guide prompt and retrieval improvements.",
+    ],
+  },
+  {
+    title: "Senior AI Engineer",
+    job: "InfoEdge",
+    date: "May 2026 – Present",
+    contents: [
+      "Tools & Technologies: Python, vLLM, Qdrant, LangChain, RAG",
+      "Spearheaded the development of a production-grade LLM pipeline for intelligent job matching and semantic search, significantly improving recommendation relevance.",
+      "Deployed scalable RAG architectures using vLLM and Qdrant to process, embed, and retrieve relevant candidate profiles with sub-second latency.",
     ],
   },
 ];
