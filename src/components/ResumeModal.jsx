@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 
 const ResumeModal = ({ isOpen, onClose }) => {
+  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
   return (
     <AnimatePresence>
       {isOpen && (
@@ -36,7 +37,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 {/* Download Button */}
                 <a
-                  href="/resume.pdf"
+                  href={resumeUrl}
                   download="Kartikeya_Singh_Resume.pdf"
                   className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 text-sm font-medium text-white transition-all duration-200 cursor-pointer"
                 >
@@ -87,7 +88,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
               {/* Desktop View: Iframe PDF preview */}
               <div className="hidden md:block w-full h-full">
                 <iframe
-                  src="/resume.pdf#toolbar=1"
+                  src={`${resumeUrl}#toolbar=1`}
                   className="w-full h-full border-0 bg-neutral-950"
                   title="Resume Preview"
                 />
@@ -130,7 +131,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
                 <div className="w-full flex flex-col gap-3 pt-2">
                   {/* Open in New Tab Button */}
                   <a
-                    href="/resume.pdf"
+                    href={resumeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 px-4 rounded-xl bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all duration-200 flex items-center justify-center gap-2"
@@ -155,7 +156,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
 
                   {/* Direct Download Button */}
                   <a
-                    href="/resume.pdf"
+                    href={resumeUrl}
                     download="Kartikeya_Singh_Resume.pdf"
                     className="w-full py-3 px-4 rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-white font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                   >
