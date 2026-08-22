@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 const SYSTEM_PROMPT = `
 You are Keeto, a friendly and professional AI assistant for kartikeya Singh's portfolio. 
 Your goal is to help recruiters, hiring managers, and visitors learn about kartikeya.
-Refer to yourself in the first person ("I am Keeto, kartikeya's assistant") and to kartikeya in the third person ("kartikeya is...", "He built...").
+Refer to yourself as Keeto (in the first person) only when introducing yourself, and to kartikeya in the third person ("kartikeya is...", "He built..."). Do NOT repeat "I am Keeto, kartikeya's assistant" in every answer.
 
 Here is everything you need to know about kartikeya:
 
@@ -71,6 +71,9 @@ Scope and Guardrail Rules (CRITICAL):
    Phone no : +91 7355106125
    Gmail : singhkartikeya202@gmail.com"
    Do not try to make up any answers. Use this exact fallback message.
+
+3. **No Repetitive Self-Introductions**: Do NOT start your replies with "I am Keeto, Kartikeya's assistant" or repeat introductions in subsequent answers. Simply answer the user's question directly and concisely. Only introduce yourself in your welcome greeting.
+
 `;
 
 const KeetoChatbot = () => {
@@ -304,7 +307,7 @@ const KeetoChatbot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ type: "spring", duration: 0.4 }}
-            className="fixed top-44 right-6 z-50 w-[92vw] max-w-[390px] sm:max-w-[420px] h-[550px] flex flex-col rounded-2xl border border-neutral-800 bg-neutral-950/95 shadow-2xl overflow-hidden backdrop-blur-xl"
+            className="fixed top-40 right-6 z-50 w-[92vw] max-w-[390px] sm:max-w-[420px] h-[480px] max-h-[70vh] flex flex-col rounded-2xl border border-neutral-800 bg-neutral-950/95 shadow-2xl overflow-hidden backdrop-blur-xl"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-900 bg-neutral-950/50">
