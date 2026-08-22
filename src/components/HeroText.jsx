@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import ResumeModal from "./ResumeModal";
 
 const HeroText = () => {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const words = ["Intelligent", "Scalable", "Production-Grade"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
@@ -50,10 +53,8 @@ const HeroText = () => {
           >
             AI Systems
           </motion.p>
-          <motion.a
-            href="https://drive.google.com/uc?export=download&id=1V4gMcma4Jm_3Xt3hhB-7k6iYT8PZtNtw"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={() => setIsResumeOpen(true)}
             className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white font-medium text-base hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300 backdrop-blur-sm cursor-pointer w-fit"
             variants={variants}
             initial="hidden"
@@ -66,7 +67,7 @@ const HeroText = () => {
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Download Resume
-          </motion.a>
+          </motion.button>
         </div>
       </div>
       {/* Mobile View */}
@@ -111,10 +112,8 @@ const HeroText = () => {
             AI Systems
           </motion.p>
         </div>
-        <motion.a
-          href="https://drive.google.com/uc?export=download&id=1V4gMcma4Jm_3Xt3hhB-7k6iYT8PZtNtw"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.button
+          onClick={() => setIsResumeOpen(true)}
           className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white font-medium text-base hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300 backdrop-blur-sm cursor-pointer"
           variants={variants}
           initial="hidden"
@@ -127,8 +126,9 @@ const HeroText = () => {
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
           Download Resume
-        </motion.a>
+        </motion.button>
       </div>
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </div>
   );
 };
