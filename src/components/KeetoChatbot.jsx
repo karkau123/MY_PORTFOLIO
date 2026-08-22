@@ -130,9 +130,10 @@ const KeetoChatbot = () => {
 
     try {
       // Build conversation history for the API call
-      // Filter out recent messages to provide context
+      // Filter out greeting (index 0) and warning messages to ensure history starts with a user role
       const chatHistory = messages
-        .filter((m) => !m.text.includes("API Key Missing")) // Ignore warning logs
+        .slice(1) // Skip greeting message so history starts with a user turn
+        .filter((m) => !m.text.includes("API Key Missing") && !m.text.includes("Sorry, I'm having trouble")) // Ignore system/warning logs
         .map((m) => ({
           role: m.role === "model" ? "model" : "user",
           parts: [{ text: m.text }],
@@ -145,7 +146,7 @@ const KeetoChatbot = () => {
       });
 
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
         {
           method: "POST",
           headers: {
