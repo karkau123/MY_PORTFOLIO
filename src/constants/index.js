@@ -104,7 +104,7 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/kartikeyaa-singh-735a34233/",
+    href: "https://www.linkedin.com/in/kartikeya-singh-735a34233/",
     icon: "./assets/socials/linkedIn.svg",
   },
   {

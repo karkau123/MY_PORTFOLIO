@@ -17,7 +17,7 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm kartikeyaa Singh</p>
+            <p className="headtext">Hi, I'm kartikeya Singh</p>
             <p className="subtext">
               I'm an AI Software Engineer with production experience building
               LLM-powered pipelines, Multi-Agent Systems, and RAG architectures
