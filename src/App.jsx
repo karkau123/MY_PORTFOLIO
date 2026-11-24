@@ -11,19 +11,23 @@ import PortfolioGuide from "./components/PortfolioGuide";
 
 export default function App() {
   return (
-    <div className="container mx-auto max-w-7xl">
+    <>
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Projects />
-        <Experiences />
-        <Testimonial />
-        <Blogs />
-        <Contact />
+        <div className="container mx-auto max-w-7xl">
+          <About />
+          <Projects />
+          <Experiences />
+          <Testimonial />
+          <Blogs />
+          <Contact />
+        </div>
       </main>
-      <Footer />
+      <div className="container mx-auto max-w-7xl">
+        <Footer />
+      </div>
       <PortfolioGuide />
-    </div>
+    </>
   );
 }
