@@ -1,51 +1,49 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import HeroText from "../components/HeroText";
-import ParallaxBackground from "../components/parallaxBackground";
-import { Astronaut } from "../components/Astronaut";
-import { Float } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
-import { easing } from "maath";
-import { Suspense } from "react";
-import Loader from "../components/Loader";
-
-const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+export default function Hero() {
   return (
-    <section
-      id="home"
-      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
-    >
-      <HeroText />
-      <ParallaxBackground />
-      <figure
-        className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
-      >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile ? 0.23 : undefined}
-                position={isMobile ? [0, -1.5, 0] : undefined}
-              />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
-      </figure>
-    </section>
+    <>
+      <section className="hero" id="home" aria-labelledby="hero-title">
+        <div className="shell hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow hero-role"><span aria-hidden="true" /> Senior AI Engineer at InfoEdge (Naukri)</p>
+            <h1 id="hero-title">I build AI systems <em>and the backends that run them.</em></h1>
+            <p className="hero-description">
+              I’m Kartikeya Singh. I work on LLM serving, GPU inference, and event-driven systems using Python and Go.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+              <a className="button button-outline" href={import.meta.env.BASE_URL + "resume.pdf"}>
+                View résumé <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div className="benchmark" role="group" aria-labelledby="benchmark-title">
+            <div className="benchmark-top">
+              <span className="eyebrow"><span className="status-dot" aria-hidden="true" /> Selected result</span>
+              <span className="benchmark-model">all-MiniLM-L6-v2</span>
+            </div>
+            <div className="benchmark-body">
+              <p id="benchmark-title" className="benchmark-caption">Embedding execution time</p>
+              <p className="benchmark-value">7–8 <span>ms</span></p>
+              <div className="benchmark-bars">
+                <div className="benchmark-row">
+                  <span>CPU</span><i className="bar cpu" aria-hidden="true" /><strong>36 ms</strong>
+                </div>
+                <div className="benchmark-row">
+                  <span>T4 GPU</span><i className="bar gpu" aria-hidden="true" /><strong>7–8 ms</strong>
+                </div>
+              </div>
+            </div>
+            <div className="benchmark-bottom"><span>Triton + gRPC</span><span>20–30 req/s</span></div>
+          </div>
+        </div>
+      </section>
+      <section className="results" aria-label="Additional engineering results">
+        <dl className="shell results-grid">
+          <div><dt>~87%</dt><dd>fewer recurring prompt tokens<br />at IndiaMART</dd></div>
+          <div><dt>5+</dt><dd>isolated API processes consolidated<br />into one event pipeline</dd></div>
+          <div><dt>$4.2k</dt><dd>annual vendor cost savings<br />at Tata 1mg</dd></div>
+        </dl>
+      </section>
+    </>
   );
-};
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
-  });
 }
-
-export default Hero;
