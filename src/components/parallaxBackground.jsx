@@ -1,12 +1,12 @@
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 
-const ParallaxBackground = () => {
-  const { scrollYProgress } = useScroll();
-  const x = useSpring(scrollYProgress, { damping: 50 });
-  const mountain3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);
-  const planetsX = useTransform(x, [0, 0.5], ["0%", "-20%"]);
-  const mountain2Y = useTransform(x, [0, 0.5], ["0%", "30%"]);
-  const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
+const ParallaxBackground = ({ hero }) => {
+  const reducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({ target: hero, offset: ["start start", "end start"] });
+  const progress = useSpring(scrollYProgress, { damping: 32, stiffness: 125 });
+  const mountain3Y = useTransform(progress, [0, 1], ["0%", "55%"]);
+  const planetsX = useTransform(progress, [0, 1], ["0%", "-20%"]);
+  const mountain2Y = useTransform(progress, [0, 1], ["0%", "25%"]);
 
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-black/40">
@@ -27,9 +27,7 @@ const ParallaxBackground = () => {
             backgroundImage: "url(./assets/mountain-3.png)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            y: mountain3Y,
-            willChange: "transform",
-            translateZ: 0,
+            y: reducedMotion ? 0 : mountain3Y,
           }}
         />
         {/* Planets */}
@@ -39,9 +37,7 @@ const ParallaxBackground = () => {
             backgroundImage: "url(./assets/planets.png)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            x: planetsX,
-            willChange: "transform",
-            translateZ: 0,
+            x: reducedMotion ? 0 : planetsX,
           }}
         />
         {/* Mountain Layer 2 */}
@@ -51,21 +47,16 @@ const ParallaxBackground = () => {
             backgroundImage: "url(./assets/mountain-2.png)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            y: mountain2Y,
-            willChange: "transform",
-            translateZ: 0,
+            y: reducedMotion ? 0 : mountain2Y,
           }}
         />
-        {/* Mountaine Layer 1 */}
-        <motion.div
+        {/* Mountain Layer 1 */}
+        <div
           className="absolute inset-0 -z-10"
           style={{
             backgroundImage: "url(./assets/mountain-1.png)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            y: mountain1Y,
-            willChange: "transform",
-            translateZ: 0,
           }}
         />
       </div>
