@@ -3,14 +3,14 @@ import { motion, useReducedMotion } from "motion/react";
 import { FlipWords } from "./FlipWords";
 import ResumeModal from "./ResumeModal";
 
-const words = ["Scalable", "Reliable", "Production-grade"];
+const words = ["Scalable", "Reliable", "Real-world"];
 
 export default function HeroText() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const reducedMotion = useReducedMotion();
 
   return (
-    <div className="relative z-10 w-full min-w-0 max-w-3xl py-24 text-center lg:text-left">
+    <div className="relative z-10 w-full min-w-0 max-w-3xl pt-28 pb-20 text-center lg:py-24 lg:text-left">
       <motion.div initial={reducedMotion ? false : { opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.45 }}>
         <p className="mb-3 text-base font-medium text-neutral-200 sm:text-xl">
