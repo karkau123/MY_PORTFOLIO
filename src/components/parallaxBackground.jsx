@@ -9,11 +9,11 @@ const ParallaxBackground = () => {
   const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
 
   return (
-    <section className="absolute inset-0 bg-black/40">
-      <div className="relative h-screen overflow-y-hidden">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-black/40">
+      <div className="relative h-full overflow-hidden">
         {/* Background Sky */}
         <div
-          className="absolute inset-0 w-full h-screen -z-50"
+          className="absolute inset-0 w-full -z-50"
           style={{
             backgroundImage: "url(./assets/sky.jpg)",
             backgroundPosition: "bottom",
@@ -69,7 +69,7 @@ const ParallaxBackground = () => {
           }}
         />
       </div>
-    </section>
+    </div>
   );
 };
 
