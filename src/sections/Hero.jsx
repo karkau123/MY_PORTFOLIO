@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative isolate flex min-h-[min(680px,90svh)] items-center overflow-hidden c-space lg:min-h-[min(850px,100svh)]">
       <ParallaxBackground />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/15 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-primary/35 lg:bg-transparent lg:bg-gradient-to-r lg:from-primary/60 lg:via-primary/15 lg:to-transparent" />
       {showScene && (
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           <Suspense fallback={null}><HeroScene /></Suspense>
