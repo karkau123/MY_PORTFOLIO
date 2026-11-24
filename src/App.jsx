@@ -1,28 +1,29 @@
-import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
 import Testimonial from "./sections/Testimonial";
+import Blogs from "./sections/Blogs";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import KeetoChatbot from "./components/KeetoChatbot";
+import PortfolioGuide from "./components/PortfolioGuide";
 
-const App = () => {
+export default function App() {
   return (
     <div className="container mx-auto max-w-7xl">
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experiences />
-      <Testimonial />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experiences />
+        <Testimonial />
+        <Blogs />
+        <Contact />
+      </main>
       <Footer />
-      <KeetoChatbot />
+      <PortfolioGuide />
     </div>
   );
-};
-
-export default App;
+}

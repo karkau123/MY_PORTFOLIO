@@ -51,7 +51,6 @@ body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
   color: white;
-  scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
@@ -76,7 +75,7 @@ canvas {
 }
 
 .section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
+  @apply mt-14 md:mt-20;
 }
 
 .text-heading {
@@ -110,19 +109,19 @@ canvas {
 
 /* About Section */
 .grid-1 {
-  @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-2 md:col-span-3 min-h-[13rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-2 {
-  @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-3 min-h-[13rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-3 {
-  @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-3 min-h-[13rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-4 {
-  @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-2 min-h-[13rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-5 {
-  @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-4 min-h-[13rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 
 .grid-default-color {
@@ -147,4 +146,15 @@ canvas {
 
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+}
+
+html { scroll-padding-top: 4.5rem; }
+:focus-visible { outline: 2px solid var(--color-aqua); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation-play-state: paused; }
 }
