@@ -1,32 +1,29 @@
-import { useEffect } from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
+import Testimonial from "./sections/Testimonial";
 import Blogs from "./sections/Blogs";
-import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import PortfolioGuide from "./components/PortfolioGuide";
 
 export default function App() {
-  useEffect(() => {
-    const target = document.getElementById(window.location.hash.slice(1));
-    if (target?.tagName !== "DETAILS") target?.scrollIntoView();
-  }, []);
-
   return (
-    <>
-      <a className="skip-link" href="#main-content">Skip to content</a>
+    <div className="container mx-auto max-w-7xl">
       <Navbar />
-      <main id="main-content" tabIndex={-1}>
+      <main>
         <Hero />
+        <About />
         <Projects />
         <Experiences />
+        <Testimonial />
         <Blogs />
-        <About />
         <Contact />
       </main>
       <Footer />
-    </>
+      <PortfolioGuide />
+    </div>
   );
 }

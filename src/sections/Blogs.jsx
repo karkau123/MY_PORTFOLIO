@@ -1,49 +1,40 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { posts } from "../posts";
 
 export default function Blogs() {
-  const postDetails = useRef(null);
-
   useEffect(() => {
-    function openLinkedPost() {
-      const post = document.getElementById(window.location.hash.slice(1));
-      if (post && postDetails.current?.contains(post) && post.tagName === "DETAILS") {
-        post.open = true;
-        post.scrollIntoView();
-      }
+    function openLinkedNote() {
+      const id = window.location.hash.slice(1);
+      if (!posts.some((post) => post.id === id)) return;
+      const note = document.getElementById(id);
+      note.open = true;
+      note.scrollIntoView();
     }
-
-    openLinkedPost();
-    window.addEventListener("hashchange", openLinkedPost);
-    return () => window.removeEventListener("hashchange", openLinkedPost);
+    openLinkedNote();
+    window.addEventListener("hashchange", openLinkedNote);
+    return () => window.removeEventListener("hashchange", openLinkedNote);
   }, []);
 
   return (
-    <section className="section shell" id="blog" aria-labelledby="blog-title">
-      <div className="section-heading">
-        <div>
-          <p className="eyebrow">Blog</p>
-          <h2 id="blog-title">Engineering notes</h2>
-        </div>
-        <p>Practical notes on running models and building reliable backends.</p>
-      </div>
-      <div className="blog-list" ref={postDetails}>
-        {posts.map(({ id, title, summary, category, sections }) => (
-          <details className="blog-post" key={id} id={id}>
-            <summary>
-              <span className="eyebrow">{category}</span>
-              <h3>{title}</h3>
-              <span className="blog-summary">{summary}</span>
-              <span className="blog-toggle" aria-hidden="true" />
+    <section id="blog" className="c-space section-spacing" aria-labelledby="blog-title">
+      <h2 id="blog-title" className="text-heading">Engineering notes</h2>
+      <p className="subtext mt-2">Practical notes on model serving, data pipelines, and retrieval.</p>
+      <div className="mt-6 space-y-3">
+        {posts.map(({ id, title, category, summary, sections }) => (
+          <details key={id} id={id} className="rounded-2xl border border-white/10 bg-gradient-to-b from-storm to-indigo p-4 md:p-6">
+            <summary className="cursor-pointer py-1 text-xl font-medium">
+              {title}
+              <span className="mt-1 block text-sm font-normal text-sand">{category}</span>
             </summary>
-            <div className="article-body">
-              {sections.map((section) => (
-                <section key={section.title}>
-                  <h4>{section.title}</h4>
-                  <p>{section.text}</p>
-                </section>
+            <p className="subtext mt-3">{summary}</p>
+            <div className="mt-4 max-w-3xl space-y-4">
+              {sections.map(({ title: heading, text }) => (
+                <div key={heading}>
+                  <h3 className="mb-1 font-medium">{heading}</h3>
+                  <p className="subtext">{text}</p>
+                </div>
               ))}
-              <a className="text-link" href={`#${id}`}>Link to this note <span aria-hidden="true">↗</span></a>
+              <a className="inline-flex min-h-11 items-center text-aqua hover:underline" href={"#" + id}>Link to this note</a>
             </div>
           </details>
         ))}

@@ -1,74 +1,36 @@
 import { useState } from "react";
-import { profile, projects } from "../portfolio";
-
-const filters = ["All", "AI", "Backend", "Developer tools"];
-
-function HandoffPreview() {
+import Project from "../components/Project";
+import { myProjects } from "../constants";
+import { motion, useMotionValue, useSpring } from "motion/react";
+const Projects = () => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { damping: 10, stiffness: 50 });
+  const springY = useSpring(y, { damping: 10, stiffness: 50 });
+  const handleMouseMove = (e) => {
+    x.set(Math.max(8, Math.min(e.clientX + 20, window.innerWidth - 328)));
+    y.set(Math.max(8, Math.min(e.clientY + 20, window.innerHeight - 232)));
+  };
+  const [preview, setPreview] = useState(null);
   return (
-    <div className="handoff-preview" aria-hidden="true">
-      <div className="handoff-window">
-        <div className="handoff-top">
-          <span className="window-dots"><i /><i /><i /></span>
-          <span>Context Relay</span>
-        </div>
-        <div className="handoff-body">
-          <span className="handoff-source">Source conversation</span>
-          <div className="handoff-transfer"><span>ChatGPT</span><b>→</b><span>Claude</span></div>
-          <div className="handoff-packet">
-            <p>Handoff packet</p>
-            <span>✓ Decisions</span><span>✓ Open tasks</span>
-            <span>✓ Constraints</span><span>✓ Artifacts</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function Projects() {
-  const [filter, setFilter] = useState("All");
-  const visibleProjects = filter === "All" ? projects : projects.filter(({ category }) => category.includes(filter));
-
-  return (
-    <section className="section shell" id="projects" aria-labelledby="projects-title">
-      <div className="section-heading projects-heading">
-        <div>
-          <p className="eyebrow">Portfolio</p>
-          <h2 id="projects-title">Selected projects</h2>
-        </div>
-        <a className="text-link" href={profile.github}>More on GitHub <span aria-hidden="true">↗</span></a>
-      </div>
-      <div className="project-filters" role="group" aria-label="Filter projects">
-        {filters.map((option) => (
-          <button type="button" key={option} aria-pressed={filter === option} onClick={() => setFilter(option)}>
-            {option}
-          </button>
-        ))}
-      </div>
-      <span className="sr-only" role="status">{visibleProjects.length} projects shown</span>
-      <div className="project-grid">
-        {visibleProjects.map((project) => (
-          <article key={project.id} className={project.id === "context-relay" ? "project-card project-feature" : "project-card"}>
-            <div className="project-copy">
-              <p className="eyebrow">{project.format}</p>
-              <h3>{project.title}</h3>
-              <p>{project.summary}</p>
-              {project.impact && <p className="project-impact">{project.impact}</p>}
-              <ul className="tags" aria-label="Technologies">
-                {project.stack.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-              {project.links.length > 0 && (
-                <div className="project-links">
-                  {project.links.map(({ label, href }) => (
-                    <a className="text-link" href={href} key={href}>{label} <span aria-hidden="true">↗</span></a>
-                  ))}
-                </div>
-              )}
-            </div>
-            {project.id === "context-relay" && <HandoffPreview />}
-          </article>
-        ))}
-      </div>
+    <section
+      id="projects" onMouseMove={handleMouseMove}
+      className="relative c-space section-spacing"
+    >
+      <h2 className="text-heading">My Selected Projects</h2>
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-5 h-[1px] w-full" />
+      {myProjects.map((project) => (
+        <Project key={project.id} {...project} setPreview={setPreview} />
+      ))}
+      {preview && (
+        <motion.img
+          alt="" className="fixed top-0 left-0 z-40 hidden object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80 lg:block"
+          src={preview}
+          style={{ x: springX, y: springY }}
+        />
+      )}
     </section>
   );
-}
+};
+
+export default Projects;
