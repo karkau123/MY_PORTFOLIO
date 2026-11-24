@@ -1,78 +1,50 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-function Navigation() {
+
+const links = [
+  ["Home", "home"],
+  ["About", "about"],
+  ["Projects", "projects"],
+  ["Work", "work"],
+  ["Achievements", "achievements"],
+  ["Blog", "blog"],
+  ["Contact", "contact"],
+];
+
+function Navigation({ onNavigate }) {
   return (
     <ul className="nav-ul">
-      <li className="nav-li">
-        <a className="nav-link" href="#home">
-          Home
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#about">
-          About
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Work
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#achievements">
-          Achievements
-        </a>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#contact">
-          Contact
-        </a>
-      </li>
+      {links.map(([label, id]) => (
+        <li className="nav-li" key={id}>
+          <a className="nav-link" href={`#${id}`} onClick={onNavigate}>{label}</a>
+        </li>
+      ))}
     </ul>
   );
 }
-const Navbar = () => {
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+    <header className="fixed inset-x-0 top-0 z-50 w-full backdrop-blur-lg bg-primary/70">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
-          <a
-            href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
-          >
-            kartikeya
+        <div className="flex items-center justify-between min-h-14">
+          <a href="#home" className="text-lg font-bold text-neutral-200 hover:text-white" onClick={() => setIsOpen(false)}>
+            Kartikeya Singh
           </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-          >
-            <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-6 h-6"
-              alt="toggle"
-            />
+          <button type="button" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}
+            aria-controls="mobile-navigation" aria-label={isOpen ? "Close menu" : "Open menu"}
+            className="flex min-h-11 min-w-11 items-center justify-center text-neutral-200 lg:hidden">
+            <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} className="size-6" alt="" />
           </button>
-          <nav className="hidden sm:flex">
-            <Navigation />
-          </nav>
+          <nav className="hidden lg:flex" aria-label="Main navigation"><Navigation /></nav>
         </div>
       </div>
-      {isOpen && (
-        <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
-        >
-          <nav className="pb-5">
-            <Navigation />
-          </nav>
-        </motion.div>
-      )}
-    </div>
+      <motion.nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!isOpen}
+        className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto bg-primary/95 pb-4 text-center lg:hidden">
+        <Navigation onNavigate={() => setIsOpen(false)} />
+      </motion.nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

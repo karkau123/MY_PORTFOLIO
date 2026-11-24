@@ -1,32 +1,18 @@
 import { mySocials } from "../constants";
-const Footer = () => {
+
+export default function Footer() {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
-      <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
-      <div className="flex gap-2">
-        <p>Terms & Conditions</p>
-        <p>|</p>
-        <p>Privacy Policy</p>
-      </div>
+    <footer className="c-space flex flex-wrap items-center justify-between gap-5 pb-20 text-sm text-neutral-400">
+      <div className="mb-1 h-px w-full bg-gradient-to-r from-transparent via-neutral-700 to-transparent" />
+      <a href="#home" className="hover:text-white">Back to top</a>
       <div className="flex gap-3">
-        {mySocials.map((social, index) => (
-          <a
-            href={social.href}
-            key={index}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={social.icon}
-              className="w-5 h-5 hover:opacity-75 transition-opacity"
-              alt={social.name}
-            />
+        {mySocials.map(({ name, href, icon }) => (
+          <a href={href} key={name} className="flex min-h-11 min-w-10 items-center justify-center hover:opacity-75">
+            <img src={icon} className="size-5" alt={name} />
           </a>
         ))}
       </div>
-      <p>© 2025 kartikeya. All rights reserved.</p>
-    </section>
+      <p>© {new Date().getFullYear()} Kartikeya Singh</p>
+    </footer>
   );
-};
-
-export default Footer;
+}

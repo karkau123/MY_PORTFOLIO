@@ -33,19 +33,19 @@ const ReviewCard = ({ img, name, username, body }) => {
 
 export default function Testimonial() {
   return (
-    <div id="achievements" className="items-start mt-25 md:mt-35 c-space">
+    <div id="achievements" className="items-start section-spacing c-space">
       <h2 className="text-heading">
         Achievements & Positions of Responsibility
       </h2>
-      <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center w-full mt-6 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <ReviewCard key={review.name} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]">
           {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <ReviewCard key={review.name} {...review} />
           ))}
         </Marquee>
         <div className="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-primary"></div>

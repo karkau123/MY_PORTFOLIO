@@ -1,51 +1,23 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { lazy, Suspense } from "react";
+import { useMediaQuery } from "react-responsive";
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/parallaxBackground";
-import { Astronaut } from "../components/Astronaut";
-import { Float } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
-import { easing } from "maath";
-import { Suspense } from "react";
-import Loader from "../components/Loader";
 
-const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+const HeroScene = lazy(() => import("../components/HeroScene"));
+
+export default function Hero() {
+  const showScene = useMediaQuery({ minWidth: 1024, prefersReducedMotion: "no-preference" });
+
   return (
-    <section
-      id="home"
-      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
-    >
-      <HeroText />
+    <section id="home" className="relative isolate flex min-h-[min(680px,90svh)] items-center overflow-hidden c-space lg:min-h-[min(850px,100svh)]">
       <ParallaxBackground />
-      <figure
-        className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
-      >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile ? 0.23 : undefined}
-                position={isMobile ? [0, -1.5, 0] : undefined}
-              />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
-      </figure>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/15 to-transparent" />
+      {showScene && (
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <Suspense fallback={null}><HeroScene /></Suspense>
+        </div>
+      )}
+      <HeroText />
     </section>
   );
-};
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
-  });
 }
-
-export default Hero;
