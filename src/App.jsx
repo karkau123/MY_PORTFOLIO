@@ -1,32 +1,28 @@
-import { useEffect } from "react";
+import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
-import Blogs from "./sections/Blogs";
-import About from "./sections/About";
+import Testimonial from "./sections/Testimonial";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import KeetoChatbot from "./components/KeetoChatbot";
 
-export default function App() {
-  useEffect(() => {
-    const target = document.getElementById(window.location.hash.slice(1));
-    if (target?.tagName !== "DETAILS") target?.scrollIntoView();
-  }, []);
-
+const App = () => {
   return (
-    <>
-      <a className="skip-link" href="#main-content">Skip to content</a>
+    <div className="container mx-auto max-w-7xl">
       <Navbar />
-      <main id="main-content" tabIndex={-1}>
-        <Hero />
-        <Projects />
-        <Experiences />
-        <Blogs />
-        <About />
-        <Contact />
-      </main>
+      <Hero />
+      <About />
+      <Projects />
+      <Experiences />
+      <Testimonial />
+      <Contact />
       <Footer />
-    </>
+      <KeetoChatbot />
+    </div>
   );
-}
+};
+
+export default App;
